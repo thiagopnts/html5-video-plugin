@@ -1,0 +1,22 @@
+{
+  "name": "html5-video-plugin",
+  "version": "0.0.0",
+  "description": "HTML5 video plugin for Globo.com player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thiagopnts/html5-video-plugin"
+  },
+  "author": "Thiago Pontes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagopnts/html5-video-plugin/issues"
+  },
+  "homepage": "https://github.com/thiagopnts/html5-video-plugin",
+  "dependencies": {
+    "player": "~3.0.0-pre-0"
+  }
+}
