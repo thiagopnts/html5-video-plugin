@@ -18,6 +18,7 @@ var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   },
 
   initialize: function(options) {
+    console.log('using a standalone plugin from github');
     this.super('initialize');
     this.el.src = options.src;
     this.container.settings = {
