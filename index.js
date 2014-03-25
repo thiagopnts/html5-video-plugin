@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-var UIPlugin = require('player');
+var Player = require('player');
 
 var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   name: 'html5_video_playback',
