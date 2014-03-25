@@ -2,9 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-var Player = require('player');
+var UIPlugin = require('../../base/ui_plugin');
+var Styler = require('../../base/styler');
 
-var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
+var HTML5VideoPlaybackPlugin = UIPlugin.extend({
   name: 'html5_video_playback',
   type: 'playback',
   tagName: 'video',
@@ -18,8 +19,8 @@ var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   },
 
   initialize: function(options) {
-    console.log('using a standalone plugin from github');
-    this.super('initialize');
+    console.log('using standalone plugin');
+    HTML5VideoPlaybackPlugin.super('initialize').call(this, options);
     this.el.src = options.src;
     this.container.settings = {
       left: ['playpause'],
@@ -89,7 +90,7 @@ var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   },
 
   render: function() {
-    var style = Player.Base.Styler.getStyleFor(this.name);
+    var style = Styler.getStyleFor(this.name);
     this.container.$el.append(style);
     this.container.$el.append(this.el);
     return this;
