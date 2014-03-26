@@ -89,6 +89,7 @@ var HTML5VideoPlugin = Player.Base.UIPlugin.extend({
 
   render: function() {
     var style = Player.Base.Styler.getStyleFor(this.name);
+    console.log(style);
     this.container.$el.append(style);
     this.container.$el.append(this.el);
     return this;
