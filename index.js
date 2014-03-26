@@ -4,8 +4,8 @@
 
 var Player = require('player');
 
-var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
-  name: 'html5_video_playback',
+var HTML5VideoPlugin = Player.Base.UIPlugin.extend({
+  name: 'html5-video-plugin',
   type: 'playback',
   tagName: 'video',
   attributes: {
@@ -18,7 +18,7 @@ var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   },
 
   initialize: function(options) {
-    HTML5VideoPlaybackPlugin.super('initialize').call(this, options);
+    HTML5VideoPlugin.super('initialize').call(this, options);
     this.el.src = options.src;
     this.container.settings = {
       left: ['playpause'],
@@ -95,9 +95,9 @@ var HTML5VideoPlaybackPlugin = Player.Base.UIPlugin.extend({
   }
 });
 
-HTML5VideoPlaybackPlugin.canPlay = function(resource) {
+HTML5VideoPlugin.canPlay = function(resource) {
     return !!resource.match(/(.*).mp4/);
 }
 
-module.exports = HTML5VideoPlaybackPlugin;
+module.exports = HTML5VideoPlugin;
 
