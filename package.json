@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/thiagopnts/html5-video-plugin",
   "dependencies": {
-    "player": "git+https://github.com/globocom/player.git"
+    "player": "3.0.0-pre-0"
   }
 }
